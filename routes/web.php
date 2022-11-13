@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::domain('{country}.hotsinhole.test')->group(function () {
+Route::domain('{country}.hotsinhole.com')->group(function () {
     Route::get('/', function ($country) {
         dd($country);
     });
