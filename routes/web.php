@@ -20,6 +20,5 @@ Route::domain('{country}.hotsinhole.com')->group(function () {
 });
 
 Route::get('/', function () {
-    dd(\Illuminate\Support\Facades\URL::to('/'));
     return view('welcome');
 });
