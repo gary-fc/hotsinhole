@@ -1,0 +1,33 @@
+.hsh-header-auth-container {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    height: 75px;
+    background: rgb(255, 88, 100);
+    background: linear-gradient(0deg, rgba(255, 88, 100, 1) 0%, rgba(255, 101, 91, 1) 100%);
+    display: flex;
+    justify-content: space-around;
+}
+
+.hsh-header-auth-container-image {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.hsh-header-auth-image {
+    margin: 4px auto;
+}
+
+.hsh-header-auth-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+}
+
+.hsh-header-auth-items-list {
+    display: flex;
+    list-style: none;
+}

@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
+use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,9 +15,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::domain('{country}.hotsinhole.com')->group(function () {
-    Route::get('/', function ($country) {
-        dd($country);
+Route::domain('{subdomain}.' . env('APP_URL'))->group(function () {
+
+    Route::get('/', function ($subdomain) {
+        dd($subdomain);
+    });
+
+    Route::group(['prefix' => 'auth'], function () {
+        Route::get('login', [AuthController::class, 'loginView'])->name('loginView');
     });
 });
 
@@ -23,6 +30,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
-    return view('auth.login');
+
+Route::get('locale/{locale}', function ($locale) {
+    session()->put('locale', $locale);
+    return Redirect::back();
+})->name('localization.set');
+
+Route::fallback(function () {
+    return view('errors.404');
 });

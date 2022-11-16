@@ -1,0 +1,18 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+@import 'normalize/normalize';
+
+// Estilos
+@import "shared/colors";
+
+//Auth
+@import "auth/login";
+@import "auth/header_auth";
+@import "shared/button";
+
+//Errors
+@import "errors/404";
+
+
+
+
