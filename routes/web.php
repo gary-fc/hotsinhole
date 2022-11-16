@@ -36,6 +36,3 @@ Route::get('locale/{locale}', function ($locale) {
     return Redirect::back();
 })->name('localization.set');
 
-Route::fallback(function () {
-    return view('errors.404');
-});

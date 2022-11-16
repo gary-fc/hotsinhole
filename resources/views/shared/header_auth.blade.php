@@ -25,7 +25,3 @@
         <a href="{{route('localization.set', ['en'])}}">Ingles</a>
     </nav>
 </header>
-
-<div style="height: 1000px">
-
-</div>
