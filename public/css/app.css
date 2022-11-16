@@ -358,6 +358,26 @@ template {
   border-radius: 32px;
 }
 
+.toggle-no {
+  display: inline-block;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  top: 1.25em;
+  left: 3.2em;
+  transition: all 0.3s ease;
+}
+
+.toggle-yes {
+  display: inline-block;
+  position: absolute;
+  width: 2.5em;
+  height: 2.5em;
+  top: 1.25em;
+  left: 1.2em;
+  transition: all 0.3s ease;
+}
+
 .toggle.dog-rollover {
   box-sizing: border-box;
 }
@@ -405,6 +425,9 @@ label.toggle-item:before {
 
 .dog-rollover label:before {
   content: none;
+}
+.dog-rollover label .toggle-yes {
+  display: none;
 }
 .dog-rollover label .fire {
   display: inline-block;
@@ -461,6 +484,14 @@ label.toggle-item:before {
 
 #doggo:checked ~ .cup {
   animation: 0.2s linear cup 1s forwards;
+}
+#doggo:checked + label .toggle-yes {
+  display: block;
+  transition-delay: 0.7s;
+}
+#doggo:checked + label .toggle-no {
+  display: none;
+  transition-delay: 0.7s;
 }
 #doggo:checked + label .fire {
   left: 68px;

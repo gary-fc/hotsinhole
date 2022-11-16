@@ -14,7 +14,7 @@
                     </span>
                 </h3>
 
-                {{ Form::open(['url' => 'foo/bar','class'=>'test']) }}
+                {{ Form::open(['url' => 'foo/bar','class'=>'']) }}
 
                 {{Form::text('email',$value = null, ['class'=>'hsh-txt', 'placeholder'=> __('auth/login.placeholder_name')])}}
 
@@ -22,7 +22,8 @@
 
                 {{Form::password("password", ['class'=>'hsh-txt', 'placeholder'=> __('auth/login.placeholder_password')])}}
 
-                <div class="toggle dog-rollover"><input id="doggo" type="checkbox"/>
+                <div class="toggle dog-rollover">
+                    <input id="doggo" type="checkbox"/>
                     <label class="toggle-item" for="doggo">
                         <div class="fire">
                             <div class="flames">
@@ -32,6 +33,8 @@
                                 <div class="flame off-4"></div>
                             </div>
                         </div>
+                        <span class="toggle-no" style="color: white">No</span>
+                        <span class="toggle-yes" style="color: white">Yes</span>
                     </label>
                 </div>
 
