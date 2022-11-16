@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Hotsinhole - @yield('title')</title>
+    <link rel="icon" type="image/x-icon" href="https://www.w3schools.com/favicon.ico">
 
     <link href="{{ asset('css/app.css') }}?t={{ time() }}" rel="stylesheet" type="text/css">
 
