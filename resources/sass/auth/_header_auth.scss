@@ -51,7 +51,7 @@
 //menu mobile
 
 .hsh-header-auth-menu-burger-container {
-    display: flex;
+    display: none;
     align-items: center;
 }
 
@@ -115,6 +115,10 @@
 @media only screen and (max-width: $sm) {
     .hsh-header-auth-nav {
         display: none;
+    }
+
+    .hsh-header-auth-menu-burger-container{
+        display: flex;
     }
 }
 

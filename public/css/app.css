@@ -576,7 +576,7 @@ template {
 }
 
 .hsh-header-auth-menu-burger-container {
-  display: flex;
+  display: none;
   align-items: center;
 }
 
@@ -634,6 +634,9 @@ template {
 @media only screen and (max-width: 640px) {
   .hsh-header-auth-nav {
     display: none;
+  }
+  .hsh-header-auth-menu-burger-container {
+    display: flex;
   }
 }
 .hsh-login-container {
@@ -736,6 +739,7 @@ template {
 }
 
 .hsh-register-title {
+  margin: 0;
   color: hsl(4deg, 100%, 68%);
 }
 
