@@ -3,7 +3,7 @@
     display: flex;
     width: 100%;
     background: $hsh-white;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 125px);
 }
 
 .hsh-register-container-white {
@@ -68,11 +68,11 @@
 .hsh-register-form-item {
     display: block;
     width: 90%;
-    margin: 0 auto;
     height: 40px;
     box-sizing: content-box;
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    margin: 20px auto 0;
+    border-radius: 8px;
 
     input {
         display: block;
@@ -91,7 +91,7 @@
     height: 40px;
     box-sizing: content-box;
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
+    margin-top: 40px;
     border-radius: 8px;
 
 
