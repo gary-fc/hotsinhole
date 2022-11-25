@@ -3,17 +3,15 @@
 @import 'normalize/normalize';
 
 // Styles
-
-//Colors
-@import "shared/colors";
-
+//Shared
+@import "shared/index";
 //Auth
-@import "auth/login";
-@import "auth/header_auth";
-@import "shared/button";
-
+@import "auth/index";
 //Errors
-@import "errors/404";
+@import "errors/index";
+
+
+
 
 
 

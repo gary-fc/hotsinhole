@@ -1,0 +1,253 @@
+$fire-red-1: #F73B01;
+$fire-red-2: #FDAC01;
+$fire-red-3: #FFDC01;
+
+$fire-blue-1: #007ce0;
+$fire-blue-2: #1acbff;
+$fire-blue-3: #76f5fe;
+
+$animation-time: 1.5s;
+
+.fire-toggle-container input {
+    height: 40px;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 40px;
+}
+
+.fire-toggle-container.fire-toggle {
+    box-sizing: border-box;
+}
+
+.fire-toggle-no {
+    display: inline-block;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    top: 1.25em;
+    left: 3.2em;
+    transition: all .3s ease;
+}
+
+.fire-toggle-yes {
+    display: inline-block;
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    top: 1.25em;
+    left: 1.2em;
+    transition: all .3s ease;
+}
+
+
+.toggle {
+    position: relative;
+    display: inline-block;
+}
+
+
+.fire-toggle-item {
+    &:before {
+        content: none;
+    }
+
+    .fire-toggle-yes {
+        display: none;
+    }
+
+    .fire-toggle-fire {
+        display: inline-block;
+        position: absolute;
+        width: 2.5em;
+        height: 2.5em;
+        top: .25em;
+        left: 10%;
+        transition: .6s ease;
+    }
+
+    .fire-toggle-flames {
+        position: absolute;
+        bottom: 40%;
+        left: 0;
+        width: 60%;
+        height: 60%;
+        transform: translateX(-50%) rotate(45deg);
+    }
+
+    .off-1 {
+        background-color: $fire-blue-2;
+    }
+
+    .off-2 {
+        background-color: $fire-blue-2;
+    }
+
+    .off-3 {
+        background-color: $fire-blue-1;
+    }
+
+    .fire-toggle-flame {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-radius: 1vw;
+
+        &:nth-child(2n + 1) {
+            animation: flame-odd $animation-time ease-in infinite;
+        }
+
+        &:nth-child(2n) {
+            animation: flame-even $animation-time ease-in infinite;
+        }
+
+        &:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        &:nth-child(2) {
+            animation-delay: $animation-time/4;
+        }
+
+        &:nth-child(3) {
+            animation-delay: $animation-time/4 * 2;
+        }
+
+        &:nth-child(4) {
+            animation-delay: $animation-time/4 * 3;
+        }
+    }
+}
+
+.fire-toggle-item {
+    width: 100%;
+    background: $hsh-black;
+    height: 50px;
+    display: inline-block;
+    border-radius: 50px;
+    position: relative;
+    transition: all .3s ease;
+    transform-origin: 20% center;
+    cursor: pointer;
+
+    &:before {
+        display: block;
+        transition: all .2s ease;
+        width: 2.3em;
+        height: 2.3em;
+        top: .25em;
+        left: .25em;
+        border-radius: 2em;
+        border: 2px solid #88cf8f;
+    }
+}
+
+#fire:checked {
+    + .fire-toggle-item {
+        .fire-toggle-yes {
+            display: block;
+            transition-delay: .7s;
+        }
+
+        .fire-toggle-no {
+            display: none;
+            transition-delay: .7s;
+        }
+
+        .fire-toggle-fire {
+            left: 90%;
+            transform: rotate(360deg);
+        }
+
+        .fire-toggle-flame {
+            transform: scale(1);
+            transition-delay: .7s;
+        }
+
+        .off-1 {
+            background-color: $fire-red-3;
+        }
+
+        .off-2 {
+            background-color: $fire-red-2;
+        }
+
+        .off-3 {
+            background-color: $fire-red-1;
+        }
+    }
+}
+
+
+@keyframes flame-odd {
+    0%, 100% {
+        width: 0;
+        height: 0;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+    }
+    0% {
+
+        z-index: 1000000;
+    }
+    40% {
+
+        z-index: 1000000;
+    }
+    100% {
+
+        z-index: -10;
+    }
+    0% {
+        right: 0;
+        bottom: 0;
+    }
+    25% {
+        right: 1%;
+        bottom: 2%;
+    }
+    100% {
+        right: 150%;
+        bottom: 170%;
+    }
+}
+
+@keyframes flame-even {
+    0%, 100% {
+        width: 0;
+        height: 0;
+    }
+    25% {
+        width: 100%;
+        height: 100%;
+    }
+    0% {
+
+        z-index: 1000000;
+    }
+    40% {
+
+        z-index: 1000000;
+    }
+    100% {
+
+        z-index: -10;
+    }
+    0% {
+        right: 0;
+        bottom: 0;
+    }
+    25% {
+        right: 2%;
+        bottom: 1%;
+    }
+    100% {
+        right: 170%;
+        bottom: 150%;
+    }
+}

@@ -14,31 +14,31 @@
                     </span>
                 </h3>
 
-                {{ Form::open(['url' => 'foo/bar','class'=>'']) }}
+                {{ Form::open(['url' => 'auth/login', 'method' => 'post','class'=>'hsh-login-form']) }}
 
-                {{Form::text('email',$value = null, ['class'=>'hsh-txt', 'placeholder'=> __('auth/login.placeholder_name')])}}
+                <section class="hsh-login-form-item">
+                    {{Form::text('name',$value = null, ['class'=>'', 'placeholder'=> __('auth/login.placeholder_name')])}}
+                    {!! $errors->first('name', '<span class="form-text text-danger">:message</span>') !!}
+                </section>
 
-                {{Form::email("email", $value = null, ['class'=>'hsh-txt', 'placeholder'=> __('auth/login.placeholder_email')])}}
+                <section class="hsh-login-form-item">
+                    {{Form::email("email", $value = null, ['class'=>'', 'placeholder'=> __('auth/login.placeholder_email')])}}
+                    {!! $errors->first('email', '<span class="form-text text-danger">:message</span>') !!}
+                </section>
 
-                {{Form::password("password", ['class'=>'hsh-txt', 'placeholder'=> __('auth/login.placeholder_password')])}}
+                <section class="hsh-login-form-item">
+                    {{Form::password("password", ['class'=>'', 'placeholder'=> __('auth/login.placeholder_password')])}}
+                    {!! $errors->first('password', '<span class="form-text text-danger">:message</span>') !!}
+                </section>
 
-                <div class="toggle dog-rollover">
-                    <input id="doggo" type="checkbox"/>
-                    <label class="toggle-item" for="doggo">
-                        <div class="fire">
-                            <div class="flames">
-                                <div class="flame off-1"></div>
-                                <div class="flame off-2"></div>
-                                <div class="flame off-3"></div>
-                                <div class="flame off-4"></div>
-                            </div>
-                        </div>
-                        <span class="toggle-no" style="color: white">No</span>
-                        <span class="toggle-yes" style="color: white">Yes</span>
-                    </label>
-                </div>
+                <section class="hsh-login-form-item">
+                    @include('shared.forms.fire_toggle', ['name'=> 'privacy_policy'])
+                    {!! $errors->first('privacy_policy', '<span class="form-text text-danger">:message</span>') !!}
+                </section>
 
-                {{Form::submit(__('auth/login.btn_sign_up'))}}
+                <section class="hsh-login-fo">
+                    {{Form::submit(__('auth/login.btn_sign_up'))}}
+                </section>
 
                 {{ Form::close() }}
             </section>

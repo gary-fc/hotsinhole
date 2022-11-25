@@ -1,0 +1,120 @@
+.hsh-register-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    background: $hsh-white;
+    height: calc(100vh - 100px);
+}
+
+.hsh-register-container-white {
+    background: $hsh-white;
+}
+
+.hsh-register-container-left {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.hsh-register-container-form {
+    width: 90%;
+    background: $hsh-white;
+    height: 80%;
+}
+
+.hsh-register-title-container{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hsh-register-title{
+    color: $hsh-orange;
+}
+
+.hsh-register-subtitle{
+    color: $hsh-black;
+}
+
+
+.hsh-register-container-right {
+    width: 60%;
+    background: var(--hsh-red);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hsh-register-container-image {
+    width: 80%;
+    background-color: $hsh-white;
+    height: 80%;
+    border-radius: 32px;
+}
+
+.hsh-register-container-image-right {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 32px;
+}
+
+.hsh-register-form {
+    width: 100%;
+}
+
+.hsh-register-form-item {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 40px;
+    box-sizing: content-box;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+
+    input {
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 8px;
+        width: 90%;
+        height: 90%;
+    }
+}
+
+.hsh-register-form-item-btn {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    height: 40px;
+    box-sizing: content-box;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    border-radius: 8px;
+
+
+    input {
+        background: linear-gradient(0deg, rgba(255, 88, 100, 1) 0%, rgba(255, 101, 91, 1) 100%);
+        display: block;
+        margin: 0 auto;
+        border: none;
+        border-radius: 8px;
+        width: 100%;
+        height: 100%;
+
+        color: white;
+    }
+}
+
+
+@media only screen and (max-width: $sm) {
+    .hsh-register-container-left {
+        width: 100%;
+    }
+
+    .hsh-register-container-right {
+        display: none;
+    }
+}

@@ -22,7 +22,9 @@ Route::domain('{subdomain}.' . env('APP_URL'))->group(function () {
     });
 
     Route::group(['prefix' => 'auth'], function () {
-        Route::get('login', [AuthController::class, 'loginView'])->name('loginView');
+        Route::get('register', [AuthController::class, 'createRegister'])->name('createRegister');
+        Route::get('login', [AuthController::class, 'createLogin'])->name('createLogin');
+        Route::post('login', [AuthController::class, 'login'])->name('login');
     });
 });
 
