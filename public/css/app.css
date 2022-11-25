@@ -522,6 +522,11 @@ template {
 }
 
 .hsh-footer-auth {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 0;
   height: 50px;
   background: linear-gradient(0deg, rgb(255, 88, 100) 0%, rgb(255, 101, 91) 100%);
 }
