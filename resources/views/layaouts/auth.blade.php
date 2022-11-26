@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, virtual-keyboard=overlays-content">
+    <meta name="theme-color" content="#FF655B" />
     <title>Hotsinhole - @yield('title')</title>
     <link rel="icon" type="image/x-icon" href="https://www.w3schools.com/favicon.ico">
 
