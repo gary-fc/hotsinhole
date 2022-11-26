@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, virtual-keyboard=overlays-content">
@@ -13,7 +13,7 @@
     <title>Hotsinhole - @yield('title')</title>
 </head>
 <body>
-@include('shared.headers.header_auth')
+@include('shared.headers.header_main')
 
 @yield('content')
 

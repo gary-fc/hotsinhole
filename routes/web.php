@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Home\HomeController;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Route;
 
@@ -17,14 +18,14 @@ use Illuminate\Support\Facades\Route;
 
 Route::domain('{subdomain}.' . env('APP_URL'))->group(function () {
 
-    Route::get('/', function ($subdomain) {
-        dd($subdomain);
-    });
+    Route::get('/', [HomeController::class, 'index'])->name('home');
 
     Route::group(['prefix' => 'auth'], function () {
-        Route::get('register', [AuthController::class, 'createRegister'])->name('createRegister');
         Route::get('login', [AuthController::class, 'createLogin'])->name('createLogin');
         Route::post('login', [AuthController::class, 'login'])->name('login');
+        Route::get('register', [AuthController::class, 'createRegister'])->name('createRegister');
+        Route::post('register', [AuthController::class, 'register'])->name('register');
+        Route::get('logout', [AuthController::class, 'logout'])->name('logout');
     });
 });
 

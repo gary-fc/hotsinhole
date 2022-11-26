@@ -11,17 +11,17 @@
             <ul class="hsh-header-auth-items-list">
                 <li class="hsh-header-auth-item">
                     <a class="hsh-link" href="auth/login">
-                        @lang('auth/header_auth.home')
+                        @lang('auth/headers/header_auth.home')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item">
                     <a class="hsh-link" href="auth/login">
-                        @lang('auth/header_auth.sign_in')
+                        @lang('auth/headers/header_auth.sign_in')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item">
-                    <a class="hsh-link" href="auth/register">
-                        @lang('auth/header_auth.sign_up')
+                    <a class="hsh-link" href="{{route('createLogin',[$subdomain])}}">
+                        @lang('auth/headers/header_auth.sign_up')
                     </a>
                 </li>
             </ul>
@@ -41,7 +41,7 @@
             <ul class="hsh-header-auth-items-list-mobile">
                 <li class="hsh-header-auth-item-mobile">
                     <a class="hsh-link" href="auth/login">
-                        @lang('auth/header_auth.home')
+                        @lang('auth/headers/header_auth.home')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item-mobile">

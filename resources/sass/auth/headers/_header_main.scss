@@ -1,0 +1,145 @@
+.hsh-header-main-main {
+    background: linear-gradient(0deg, rgba(255, 88, 100, 1) 0%, rgba(255, 101, 91, 1) 100%);
+}
+
+.open-menu {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100vh;
+
+    .hsh-header-main-mobile {
+        display: block;
+    }
+}
+
+.hsh-header-main-container {
+    width: 100%;
+    top: 0;
+    height: 75px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hsh-header-main-container-image {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.hsh-header-main-image {
+    margin: 4px auto;
+}
+
+.hsh-header-main-logo-text {
+    height: max-content;
+    font-size: 30px;
+}
+
+.hsh-header-main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 70%;
+}
+
+.hsh-header-main-items-list {
+    list-style: none;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.hsh-header-main-item {
+    display: flex;
+    align-items: center;
+}
+
+.hsh-header-main-item-post-add {
+    background-color: $hsh-black;
+    height: 40px;
+
+    .hsh-link {
+        color: white;
+    }
+}
+
+//menu mobile
+
+.hsh-header-main-menu-burger-container {
+    display: none;
+    align-items: center;
+}
+
+.hsh-header-main-menu-burger {
+    display: inline-block;
+    cursor: pointer;
+    height: 33px;
+}
+
+.hsh-header-main-menu-burger-bar1, .hsh-header-main-menu-burger-bar2, .hsh-header-main-menu-burger-bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hsh-header-main-menu-burger-bar1 {
+    margin: 0;
+}
+
+.change .hsh-header-main-menu-burger-bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .hsh-header-main-menu-burger-bar2 {
+    opacity: 0;
+}
+
+.change .hsh-header-main-menu-burger-bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.hsh-header-main-mobile {
+    display: none;
+    margin-top: 40px;
+}
+
+.hsh-header-main-nav-mobile {
+
+}
+
+.hsh-header-main-items-list-mobile {
+    list-style: none;
+    padding: 0;
+}
+
+.hsh-header-main-item-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    margin-top: 5px;
+
+    .hsh-link {
+        font-size: 24px;
+    }
+}
+
+
+@media only screen and (max-width: $sm) {
+    .hsh-header-main-nav {
+        display: none;
+    }
+
+    .hsh-header-main-menu-burger-container {
+        display: flex;
+    }
+}
+

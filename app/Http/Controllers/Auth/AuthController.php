@@ -2,36 +2,67 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\Http\Controllers\Auth\Request\RegisterRequest;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    public function createRegister()
+
+    public function __constructor()
     {
-        return view('auth.register');
+        $this->middleware('guest')->except('logout');
     }
 
-    public function createLogin()
+    public function createRegister($subdomain)
     {
-        return view('auth.login');
+        $data = [
+            'subdomain' => $subdomain
+        ];
+        return view('auth.register', $data);
+    }
+
+    public function createLogin($subdomain)
+    {
+        $data = [
+            'subdomain' => $subdomain
+        ];
+        return view('auth.login', $data);
     }
 
     public function login(Request $request)
     {
-        dd($request->request);
+        $request->validate(['email' => 'required|string|email', 'password' => 'required|string']);
+
+        $credentials = $request->only('email', 'password');
+        if (Auth::attempt($credentials)) {
+            return redirect()->intended('/');
+        }
+        return redirect('auth/login')->with('error', 'Ops');
+    }
+
+    public function register(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string',
+            'email' => 'required|string|email',
+            'password' => 'required|string',
+            'repeat_password' => 'required'
+        ]);
+        User::insert([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => Hash::make($request->password)
+        ]);
+        return redirect('auth/login');
 
     }
 
-    public function register(RegisterRequest $request)
+    public function logout()
     {
-        dd($request->request);
-
-    }
-
-    protected function prepareForValidation()
-    {
-
+        Auth::logout();
+        return redirect('auth/login');
     }
 }

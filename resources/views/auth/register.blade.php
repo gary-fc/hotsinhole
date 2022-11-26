@@ -34,8 +34,8 @@
                 </section>
 
                 <section class="hsh-register-form-item">
-                    {{Form::password("password", ['class'=>'', 'placeholder'=> __('auth/register.placeholder_repeat_password')])}}
-                    {!! $errors->first('password', '<span class="form-text text-danger">:message</span>') !!}
+                    {{Form::password("repeat_password", ['class'=>'', 'placeholder'=> __('auth/register.placeholder_repeat_password')])}}
+                    {!! $errors->first('repeat_password', '<span class="form-text text-danger">:message</span>') !!}
                 </section>
 
                 {{--                <section class="hsh-register-form-item">--}}
