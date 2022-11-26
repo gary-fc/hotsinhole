@@ -134,6 +134,10 @@
 
 
 @media only screen and (max-width: $sm) {
+    .hsh-header-main-logo-text {
+        display: none;
+    }
+
     .hsh-header-main-nav {
         display: none;
     }

@@ -26,10 +26,17 @@
     width: 30%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
 
 .hsh-header-auth-image {
     margin: 4px auto;
+}
+
+.hsh-header-auth-logo-text {
+    height: max-content;
+    font-size: 30px;
 }
 
 .hsh-header-auth-nav {
@@ -113,11 +120,15 @@
 
 
 @media only screen and (max-width: $sm) {
+    .hsh-header-auth-logo-text {
+        display: none;
+    }
+
     .hsh-header-auth-nav {
         display: none;
     }
 
-    .hsh-header-auth-menu-burger-container{
+    .hsh-header-auth-menu-burger-container {
         display: flex;
     }
 }

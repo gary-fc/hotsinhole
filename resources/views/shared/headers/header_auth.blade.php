@@ -5,6 +5,9 @@
                 <img class="hsh-header-auth-image"
                      src="{{asset('img/logo_64.png')}}" alt="hotsinhole.png"/>
             </a>
+            <label class="hsh-header-auth-logo-text">
+                Hotsinhole
+            </label>
         </section>
 
         <nav class="hsh-header-auth-nav">
@@ -46,12 +49,12 @@
                 </li>
                 <li class="hsh-header-auth-item-mobile">
                     <a class="hsh-link" href="auth/login">
-                        @lang('auth/header_auth.sign_in')
+                        @lang('auth/headers/header_auth.sign_in')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item-mobile">
                     <a class="hsh-link" href="auth/register">
-                        @lang('auth/header_auth.sign_up')
+                        @lang('auth/headers/header_auth.sign_up')
                     </a>
                 </li>
             </ul>

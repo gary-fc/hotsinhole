@@ -63,16 +63,24 @@
                         @lang('auth/headers/header_main.home')
                     </a>
                 </li>
-                <li class="hsh-header-main-item-mobile">
-                    <a class="hsh-link" href="auth/login">
-                        @lang('auth/header_auth.sign_in')
-                    </a>
-                </li>
-                <li class="hsh-header-main-item-mobile">
-                    <a class="hsh-link" href="auth/register">
-                        @lang('auth/header_auth.sign_up')
-                    </a>
-                </li>
+                @if(Auth::user())
+                    <li class="hsh-header-main-item-mobile">
+                        <a class="hsh-link" href="{{route('logout', $subdomain)}}">
+                            @lang('auth/headers/header_main.logout')
+                        </a>
+                    </li>
+                @else
+                    <li class="hsh-header-main-item-mobile">
+                        <a class="hsh-link" href="auth/login">
+                            @lang('auth/headers/header_main.sign_in')
+                        </a>
+                    </li>
+                    <li class="hsh-header-main-item-mobile">
+                        <a class="hsh-link" href="auth/register">
+                            @lang('auth/headers/header_main.sign_up')
+                        </a>
+                    </li>
+                @endif
             </ul>
         </nav>
     </section>
