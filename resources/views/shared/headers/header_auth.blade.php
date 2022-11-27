@@ -13,19 +13,25 @@
         <nav class="hsh-header-auth-nav">
             <ul class="hsh-header-auth-items-list">
                 <li class="hsh-header-auth-item">
-                    <a class="hsh-link" href="auth/login">
+                    <a class="hsh-link" href="/">
                         @lang('auth/headers/header_auth.home')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item">
-                    <a class="hsh-link" href="auth/login">
+                    <a class="hsh-link" href="{{route('createLogin',[$subdomain])}}">
                         @lang('auth/headers/header_auth.sign_in')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item">
-                    <a class="hsh-link" href="{{route('createLogin',[$subdomain])}}">
+                    <a class="hsh-link" href="{{route('createRegister',[$subdomain])}}">
                         @lang('auth/headers/header_auth.sign_up')
                     </a>
+                </li>
+                <li class="hsh-header-auth-item">
+                    <a class="hsh-link" href="{{route('localization.set', ['es'])}}">Español</a>
+                </li>
+                <li class="hsh-header-auth-item">
+                    <a class="hsh-link" href="{{route('localization.set', ['en'])}}">Ingles</a>
                 </li>
             </ul>
         </nav>
@@ -43,26 +49,29 @@
         <nav class="hsh-header-auth-nav-mobile">
             <ul class="hsh-header-auth-items-list-mobile">
                 <li class="hsh-header-auth-item-mobile">
-                    <a class="hsh-link" href="auth/login">
+                    <a class="hsh-link" href="{{route('home',[$subdomain])}}">
                         @lang('auth/headers/header_auth.home')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item-mobile">
-                    <a class="hsh-link" href="auth/login">
+                    <a class="hsh-link" href="{{route('createLogin',[$subdomain])}}">
                         @lang('auth/headers/header_auth.sign_in')
                     </a>
                 </li>
                 <li class="hsh-header-auth-item-mobile">
-                    <a class="hsh-link" href="auth/register">
+                    <a class="hsh-link" href="{{route('createRegister',[$subdomain])}}">
                         @lang('auth/headers/header_auth.sign_up')
                     </a>
+                </li>
+                <li class="hsh-header-auth-item-mobile">
+                    <a class="hsh-link" href="{{route('localization.set', ['es'])}}">Español</a>
+                </li>
+                <li class="hsh-header-auth-item-mobile">
+                    <a class="hsh-link" href="{{route('localization.set', ['en'])}}">Ingles</a>
                 </li>
             </ul>
         </nav>
     </section>
-
-    {{--    <a href="{{route('localization.set', ['es'])}}">Español</a>--}}
-    {{--    <a href="{{route('localization.set', ['en'])}}">Ingles</a>--}}
 </header>
 
 

@@ -43,6 +43,12 @@
                         </a>
                     </li>
                 @endif
+                <li class="hsh-header-main-item">
+                    <a class="hsh-link" href="{{route('localization.set', ['es'])}}">Español</a>
+                </li>
+                <li class="hsh-header-main-item">
+                    <a class="hsh-link" href="{{route('localization.set', ['en'])}}">Ingles</a>
+                </li>
             </ul>
         </nav>
 
@@ -59,7 +65,7 @@
         <nav class="hsh-header-main-nav-mobile">
             <ul class="hsh-header-main-items-list-mobile">
                 <li class="hsh-header-main-item-mobile">
-                    <a class="hsh-link" href="auth/login">
+                    <a class="hsh-link" href="{{route('home',[$subdomain])}}">
                         @lang('auth/headers/header_main.home')
                     </a>
                 </li>
@@ -71,16 +77,22 @@
                     </li>
                 @else
                     <li class="hsh-header-main-item-mobile">
-                        <a class="hsh-link" href="auth/login">
+                        <a class="hsh-link" href="{{route('login', $subdomain)}}">
                             @lang('auth/headers/header_main.sign_in')
                         </a>
                     </li>
                     <li class="hsh-header-main-item-mobile">
-                        <a class="hsh-link" href="auth/register">
+                        <a class="hsh-link" href="{{route('register', $subdomain)}}">
                             @lang('auth/headers/header_main.sign_up')
                         </a>
                     </li>
                 @endif
+                <li class="hsh-header-main-item-mobile">
+                    <a class="hsh-link" href="{{route('localization.set', ['es'])}}">Español</a>
+                </li>
+                <li class="hsh-header-main-item-mobile">
+                    <a class="hsh-link" href="{{route('localization.set', ['en'])}}">Ingles</a>
+                </li>
             </ul>
         </nav>
     </section>
