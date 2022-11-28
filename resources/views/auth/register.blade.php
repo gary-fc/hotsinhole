@@ -43,6 +43,11 @@
                 {{--                    {!! $errors->first('privacy_policy', '<span class="form-text text-danger">:message</span>') !!}--}}
                 {{--                </section>--}}
 
+                <section class="hsh-h-captcha">
+                    @include('shared/captcha/h-captcha')
+                </section>
+
+
                 <section class="hsh-register-form-item-btn">
                     {{Form::submit(__('auth/register.btn_sign_up'))}}
                 </section>

@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <!-- Css -->
     <link href="{{ asset('css/app.css') }}?t={{ time() }}" rel="stylesheet" type="text/css">
+    <!-- Recaptcha -->
+    <script src="https://js.hcaptcha.com/1/api.js?hl=en" async defer></script>
 
     <title>Hotsinhole - @yield('title')</title>
 </head>

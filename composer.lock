@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5b03e83b1a7e1b35fab8d7d815624c9",
+    "content-hash": "bdd123a0cd7485349c527c790990c6a2",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2687,6 +2687,65 @@
                 }
             ],
             "time": "2021-09-25T23:10:38+00:00"
+        },
+        {
+            "name": "scyllaly/hcaptcha",
+            "version": "4.4.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Scyllaly/hcaptcha.git",
+                "reference": "97f516f46e42b6eaf45858b5c93b36c103ecde35"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Scyllaly/hcaptcha/zipball/97f516f46e42b6eaf45858b5c93b36c103ecde35",
+                "reference": "97f516f46e42b6eaf45858b5c93b36c103ecde35",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*|6.*|7.*|8.*|^9.0",
+                "php": ">=5.5.5"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.8|^9.5.10"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Scyllaly\\HCaptcha\\HCaptchaServiceProvider"
+                    ],
+                    "aliases": {
+                        "HCaptcha": "Scyllaly\\HCaptcha\\Facades\\HCaptcha"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Scyllaly\\HCaptcha\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "scyllaly",
+                    "email": "scyllaly@github.com"
+                }
+            ],
+            "description": "hCaptcha for Laravel",
+            "keywords": [
+                "captcha",
+                "hcaptcha",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/Scyllaly/hcaptcha/issues",
+                "source": "https://github.com/Scyllaly/hcaptcha/tree/4.4.4"
+            },
+            "time": "2022-04-23T10:52:26+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",

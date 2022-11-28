@@ -524,6 +524,16 @@ template {
   padding: 0 20px;
 }
 
+.hsh-h-captcha {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 20px auto 0;
+  border-radius: 8px;
+}
+
 .hsh-footer-auth {
   height: 50px;
   background: linear-gradient(0deg, rgb(255, 88, 100) 0%, rgb(255, 101, 91) 100%);
@@ -1000,7 +1010,7 @@ template {
   height: 40px;
   box-sizing: content-box;
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
-  margin: 40px auto 0;
+  margin: 30px auto 0;
   border-radius: 8px;
 }
 .hsh-register-form-item-btn input {
