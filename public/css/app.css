@@ -524,14 +524,44 @@ template {
   padding: 0 20px;
 }
 
+.hsh-txt {
+  font-size: 16px;
+}
+
 .hsh-h-captcha {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  height: -moz-max-content;
-  height: max-content;
+  width: -moz-max-content;
+  width: max-content;
+  box-sizing: content-box;
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+  height: 78px;
   margin: 20px auto 0;
   border-radius: 8px;
+}
+
+@font-face {
+  font-family: "icomoon";
+  src: url(/fonts/icomoon.eot?75bdca3cb9a00d27381c0a5073f87a4f);
+  src: url(/fonts/icomoon.eot?75bdca3cb9a00d27381c0a5073f87a4f#iefix) format("embedded-opentype"), url(/fonts/icomoon.ttf?a1c83e6b345245e52aaf54b6c4137912) format("truetype"), url(/fonts/icomoon.woff?0134d3d829500b391952b59fd2452b91) format("woff"), url(/fonts/icomoon.svg?2f6c247e551147815f7d239d25d1afaf#icomoon) format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home:before {
+  content: "\e900";
 }
 
 .hsh-footer-auth {
@@ -1123,4 +1153,60 @@ template {
     fill: transparent;
     stroke-dashoffset: -200;
   }
+}
+.hsh-country-item-container-city {
+  text-align: center;
+}
+
+.hsh-country-item-container {
+  width: 100%;
+}
+
+.hsh-country-item-container-country {
+  display: flex;
+  justify-content: center;
+  max-width: 500px;
+  width: 90%;
+  box-sizing: content-box;
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px auto 0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.hsh-country-item-left {
+  width: 25%;
+}
+.hsh-country-item-left img {
+  width: 100%;
+}
+
+.hsh-country-item-right {
+  width: 70%;
+  text-align: center;
+}
+
+.hsh-country-item-country-name {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  height: 30%;
+}
+
+.hsh-country-item-country-body {
+  height: 40%;
+}
+
+.hsh-country-item-country-details {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  height: 30%;
+  align-items: start;
+}
+
+.hsh-country-item-container-cities {
+  max-width: 500px;
+  width: 90%;
+  margin: 0 auto;
 }

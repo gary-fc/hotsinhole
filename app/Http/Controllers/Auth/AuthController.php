@@ -50,7 +50,8 @@ class AuthController extends Controller
             'email' => 'required|string|email',
             'password' => 'required|string',
             'repeat_password' => 'required',
-            'h-captcha-response' => 'required|HCaptcha'
+            'h-captcha-response' => 'required|HCaptcha',
+            'g-captcha-response' => 'required|HCaptcha'
         ]);
         User::insert([
             'name' => $request->name,

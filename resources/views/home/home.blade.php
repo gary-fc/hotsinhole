@@ -1,14 +1,12 @@
 @php
-    $countries = \App\Models\Country::all();
-
+    $countries = \App\Models\Country::with('cities')->get();
 @endphp
-@extends('layaouts.main')
+@extends('layouts.main')
 
 @section('title','Register')
 
 @section('content')
-    <h1>subdomain - {{$subdomain}}</h1>
     @foreach($countries as $country)
-        <h1>{{$country->country_name}}</h1>
+        @include('home/country/country_item',[$country])
     @endforeach
 @endsection

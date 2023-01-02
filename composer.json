@@ -13,7 +13,8 @@
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4",
         "laravelcollective/html": "^6.3",
-        "scyllaly/hcaptcha": "^4.4"
+        "scyllaly/hcaptcha": "^4.4",
+        "twilio/sdk": "^6.43"
     },
     "require-dev": {
         "facade/ignition": "^2.5",

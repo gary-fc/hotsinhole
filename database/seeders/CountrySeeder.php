@@ -23,7 +23,7 @@ class CountrySeeder extends Seeder
             array('country_name' => 'Argentina', 'abbreviation' => 'AR', 'subdomain' => 'ar', 'enabled' => 0),
             array('country_name' => 'Bolivia', 'abbreviation' => 'BO', 'subdomain' => 'bo', 'enabled' => 0),
             array('country_name' => 'Brazil', 'abbreviation' => 'BR', 'subdomain' => 'br', 'enabled' => 0),
-            array('country_name' => 'Chile', 'abbreviation' => 'BR', 'subdomain' => 'cl', 'enabled' => 0),
+            array('country_name' => 'Chile', 'abbreviation' => 'CL', 'subdomain' => 'cl', 'enabled' => 0),
             array('country_name' => 'Colombia', 'abbreviation' => 'CO', 'subdomain' => 'co', 'enabled' => 0),
             array('country_name' => 'Ecuador', 'abbreviation' => 'EC', 'subdomain' => 'ec', 'enabled' => 0),
             array('country_name' => 'Guayana Francesa', 'abbreviation' => 'GF', 'subdomain' => 'gf', 'enabled' => 0),

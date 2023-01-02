@@ -17,4 +17,9 @@ class Country extends Model
         'subdomain',
         'enabled',
     ];
+
+    public function cities()
+    {
+        return $this->hasMany(City::class);
+    }
 }

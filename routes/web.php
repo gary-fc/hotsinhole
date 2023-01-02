@@ -29,9 +29,7 @@ Route::domain('{subdomain}.' . env('APP_URL'))->group(function () {
     });
 });
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 
 Route::get('locale/{locale}', function ($locale) {

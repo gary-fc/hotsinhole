@@ -19,7 +19,7 @@ class CreateCitiesTable extends Migration
             $table->string('city_name');
             $table->string('abbreviation');
             $table->string('subdomain');
-            $table->boolean('enabled')->default(0)->change();
+            $table->boolean('enabled')->default(0);
             $table->foreignIdFor(Country::class)->constrained()->onDelete('cascade');
             $table->timestamps();
         });
