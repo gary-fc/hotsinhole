@@ -25,7 +25,7 @@ class CitySeeder extends Seeder
 
     public function addCitiesArgentina()
     {
-        $country = Country::where('abbreviation', 'AR')->first();
+        $country = Country::where('abbreviation', 'argentina')->first();
 
         $cities = array(
             array('city_name' => 'Avellaneda', 'abbreviation' => 'avellaneda', 'subdomain' => 'ar', 'enabled' => 0, 'country_id' => $country->id),

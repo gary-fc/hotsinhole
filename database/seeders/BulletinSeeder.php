@@ -26,10 +26,10 @@ Atiendo en mi depa y tmb hago salidas a hoteles , moteles , deoartamentos atiend
                 'bulletin_zone' => 'Equipetrol',
                 'status' => Bulletin::STATUS_DRAFT,
                 'type' => Bulletin::TYPE_FREE,
-                'user_id' => 2,
+                'user_id' => 1,
                 'category_id' => 1,
                 'city_id' => 1,
-                'country_id' => 4,
+                'country_id' => 1,
             ),
             array(
                 'bulletin_title' => '🔥💋Sexy choca tetona , con curvas de infarto🔥💋',
@@ -42,10 +42,10 @@ Atiendo en mi depa y tmb hago salidas a hoteles , moteles , deoartamentos atiend
                 'bulletin_zone' => 'Equipetrol',
                 'status' => Bulletin::STATUS_DRAFT,
                 'type' => Bulletin::TYPE_TOP,
-                'user_id' => 2,
+                'user_id' => 1,
                 'category_id' => 1,
                 'city_id' => 1,
-                'country_id' => 4,
+                'country_id' => 1,
             ),
             array(
                 'bulletin_title' => '🔥💋Sexy choca tetona , con curvas de infarto🔥💋',
@@ -58,10 +58,10 @@ Atiendo en mi depa y tmb hago salidas a hoteles , moteles , deoartamentos atiend
                 'bulletin_zone' => 'Equipetrol',
                 'status' => Bulletin::STATUS_DRAFT,
                 'type' => Bulletin::TYPE_PREMIUM,
-                'user_id' => 2,
+                'user_id' => 1,
                 'category_id' => 1,
                 'city_id' => 1,
-                'country_id' => 4,
+                'country_id' => 1,
             ),
             array(
                 'bulletin_title' => '🔥💋Sexy choca tetona , con curvas de infarto🔥💋',
@@ -74,10 +74,10 @@ Atiendo en mi depa y tmb hago salidas a hoteles , moteles , deoartamentos atiend
                 'bulletin_zone' => 'Equipetrol',
                 'status' => Bulletin::STATUS_DRAFT,
                 'type' => Bulletin::TYPE_HOT,
-                'user_id' => 2,
+                'user_id' => 1,
                 'category_id' => 1,
                 'city_id' => 1,
-                'country_id' => 4,
+                'country_id' => 1,
             )
         );
 
