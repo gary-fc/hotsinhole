@@ -17,6 +17,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('locale/{locale}', function ($locale) {
+    session()->put('locale', $locale);
+    return Redirect::back();
+})->name('localization.set');
+
 Route::domain('{subdomain}.' . env('APP_URL'))->group(function () {
 
     Route::group(['prefix' => 'auth'], function () {
@@ -35,8 +40,5 @@ Route::domain('{subdomain}.' . env('APP_URL'))->group(function () {
 Route::get('/', [HomeController::class, 'index']);
 
 
-Route::get('locale/{locale}', function ($locale) {
-    session()->put('locale', $locale);
-    return Redirect::back();
-})->name('localization.set');
+
 

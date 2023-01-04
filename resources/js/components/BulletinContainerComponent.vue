@@ -1,7 +1,9 @@
 <template>
-    <bulletin-item-component v-for="(item,index) in this.bulletins"
-                             :bulletin-id="item.id"
-                             :bulletin="item"></bulletin-item-component>
+    <section class="hsh-bulletin-container-component">
+        <bulletin-item-component v-for="(item,index) in this.bulletins"
+                                 :bulletin-id="item.id"
+                                 :bulletin="item"></bulletin-item-component>
+    </section>
 </template>
 
 <script>

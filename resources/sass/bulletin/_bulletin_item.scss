@@ -1,10 +1,79 @@
 .hsh-bulletin-item-container {
     width: 100%;
     display: flex;
-    margin-top: 10px;
+    margin-top: 30px;
     box-sizing: content-box;
     box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
     border-radius: 8px;
+    position: relative;
+
+    &.bg-top {
+        border: 2px solid $hsh-orange;
+    }
+
+    &.bg-premium {
+        box-shadow: 4px 4px 9px 0 $hsh-pink;
+    }
+
+    &.bg-hot {
+        -webkit-animation: change 2s infinite;
+        animation: change 2s infinite;
+    }
+}
+
+@keyframes change {
+    0% {
+        border: 2px solid $hsh-red;
+        box-shadow: 4px 4px 32px 0 $hsh-red;
+    }
+    15% {
+        border: 2px solid $hsh-orange;
+        box-shadow: 4px 4px 32px 0 $hsh-orange;
+    }
+    30% {
+        border: 2px solid $hsh-red;
+        box-shadow: 4px 4px 32px 0 $hsh-red;
+    }
+    45% {
+        border: 2px solid $hsh-orange;
+        box-shadow: 4px 4px 32px 0 $hsh-orange;
+    }
+    60% {
+        border: 2px solid $hsh-red;
+        box-shadow: 4px 4px 32px 0 $hsh-red;
+    }
+    75% {
+        border: 2px solid $hsh-orange;
+        box-shadow: 4px 4px 32px 0 $hsh-orange;
+    }
+    90% {
+        border: 2px solid $hsh-red;
+        box-shadow: 4px 4px 32px 0 $hsh-red;
+    }
+    100% {
+        border: 2px solid $hsh-orange;
+        box-shadow: 4px 4px 32px 0 $hsh-orange;
+    }
+}
+
+.hsh-bulletin-item-type {
+    padding: 2px 16px;
+    position: absolute;
+    top: -10px;
+    right: 15px;
+    border-radius: 4px;
+}
+
+.icon-top-arrow-svgrepo-com {
+    background-color: $hsh-red;
+}
+
+.icon-premium-badge-svgrepo-com {
+    background-color: $hsh-pink;
+}
+
+.icon-hot-svgrepo-com-1 {
+    background-color: $hsh-orange;
 }
 
 .hsh-bulletin-item-container-left {
@@ -25,4 +94,29 @@
 
 .hsh-bulletin-item-container-right {
     cursor: pointer;
+    height: max-content;
+}
+
+.hsh-bulletin-item-description {
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 95%;
+    word-wrap: break-word;
+    font-size: 16px;
+    letter-spacing: -.1px;
+    max-height: 60px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-spacing: 0;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+}
+
+.hsh-bulletin-item-extra {
+    margin-top: 10px;
+    margin-left: 10px;
+    padding-bottom: 10px;
 }

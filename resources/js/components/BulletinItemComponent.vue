@@ -1,6 +1,16 @@
 <template>
-    <article class="hsh-bulletin-item-container">
-        <section class="hsh-bulletin-item-container-left">
+    <article class="hsh-bulletin-item-container"
+             :class="{'bg-top':bulletin?.type === 'TOP','bg-premium':bulletin?.type === 'PREMIUM','bg-hot':bulletin?.type === 'HOT',}">
+        <label class="hsh-bulletin-item-type icon-top-arrow-svgrepo-com"
+               v-if="bulletin?.type !== 'FREE' && bulletin?.type === 'TOP'"></label>
+
+        <label class="hsh-bulletin-item-type icon-premium-badge-svgrepo-com"
+               v-if="bulletin?.type !== 'FREE' && bulletin?.type === 'PREMIUM'"></label>
+
+        <label class="hsh-bulletin-item-type icon-hot-svgrepo-com-1"
+               v-if="bulletin?.type !== 'FREE' && bulletin?.type === 'HOT'"></label>
+
+        <section class="hsh-bulletin-item-container-left" v-if="bulletin?.type !== 'FREE'">
             <!-- Slideshow container -->
             <div class="hsh-slider-container">
 
@@ -16,14 +26,28 @@
                     </div>
 
                     <!-- Next and previous buttons -->
-                    <a class="prev" v-on:click="plusSlides(-1)">&#10094;</a>
-                    <a class="next" v-on:click="plusSlides(1)">&#10095;</a>
+                    <a class="prev" v-on:click="plusSlides(-1)"
+                       v-if="bulletin?.type !== 'FREE' && bulletin?.type !== 'TOP'">&#10094;</a>
+                    <a class="next" v-on:click="plusSlides(1)"
+                       v-if="bulletin?.type !== 'FREE' && bulletin?.type !== 'TOP'">&#10095;</a>
                 </section>
             </div>
         </section>
 
         <section class="hsh-bulletin-item-container-right">
-            {{ this.bulletin }}
+            <label class="hsh-txt hsh-bulletin-item-description" :title="this.bulletin?.bulletin_description">
+                {{ this.bulletin?.bulletin_description }}
+            </label>
+
+            <section class="hsh-bulletin-item-extra">
+                <label>{{ this.bulletin?.bulletin_year }} años</label>
+                |
+                <label>Escorts</label>
+                |
+                <label>Santa Cruz</label>
+                |
+                <label>Tercer Anillo</label>
+            </section>
         </section>
     </article>
 </template>

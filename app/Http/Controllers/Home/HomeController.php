@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Home;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
+use App\Models\City;
 
 class HomeController extends Controller
 {
@@ -26,8 +28,9 @@ class HomeController extends Controller
 
     public function subdomains($subdomain)
     {
-        $category = 'escorts';
-        $data = ['category' => $category, 'subdomain' => $subdomain];
+        $categories = Category::all();
+        $cities = City::where('subdomain', $subdomain)->paginate(3);
+        $data = ['subdomain' => $subdomain, 'categories' => $categories, 'cities' => $cities];
         return view('country.index', $data);
     }
 }

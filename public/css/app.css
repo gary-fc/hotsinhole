@@ -523,6 +523,7 @@ template {
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  cursor: pointer;
 }
 
 .hsh-txt {
@@ -541,8 +542,8 @@ template {
 
 @font-face {
   font-family: "icomoon";
-  src: url(/fonts/icomoon.eot?75bdca3cb9a00d27381c0a5073f87a4f);
-  src: url(/fonts/icomoon.eot?75bdca3cb9a00d27381c0a5073f87a4f#iefix) format("embedded-opentype"), url(/fonts/icomoon.ttf?a1c83e6b345245e52aaf54b6c4137912) format("truetype"), url(/fonts/icomoon.woff?0134d3d829500b391952b59fd2452b91) format("woff"), url(/fonts/icomoon.svg?2f6c247e551147815f7d239d25d1afaf#icomoon) format("svg");
+  src: url(/fonts/icomoon.eot?6c430a98060c2bf6e60b8f5f997d93cd);
+  src: url(/fonts/icomoon.eot?6c430a98060c2bf6e60b8f5f997d93cd#iefix) format("embedded-opentype"), url(/fonts/icomoon.ttf?2be543179ec4849db4aa7c5e68167780) format("truetype"), url(/fonts/icomoon.woff?5720a6b5665831c0fbaa4d6124c1f362) format("woff"), url(/fonts/icomoon.svg?2e36594fdc642df4ba17f1c2a4d6d37f#icomoon) format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -559,6 +560,18 @@ template {
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-top-arrow-svgrepo-com:before {
+  content: "\e901";
+}
+
+.icon-premium-badge-svgrepo-com:before {
+  content: "\e902";
+}
+
+.icon-hot-svgrepo-com-1:before {
+  content: "\e903";
 }
 
 .icon-home:before {
@@ -1235,17 +1248,91 @@ template {
 }
 
 .hsh-bulletins-container {
-  width: 60%;
+  width: 100%;
+  height: -moz-max-content;
+  height: max-content;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.hsh-bulletin-container-component {
+  width: 90%;
+  max-width: 960px;
   margin: 0 auto;
 }
 
 .hsh-bulletin-item-container {
   width: 100%;
   display: flex;
-  margin-top: 10px;
+  margin-top: 30px;
   box-sizing: content-box;
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
+  position: relative;
+}
+.hsh-bulletin-item-container.bg-top {
+  border: 2px solid hsl(4deg, 100%, 68%);
+}
+.hsh-bulletin-item-container.bg-premium {
+  box-shadow: 4px 4px 9px 0 hsl(337deg, 98%, 58%);
+}
+.hsh-bulletin-item-container.bg-hot {
+  animation: change 2s infinite;
+}
+
+@keyframes change {
+  0% {
+    border: 2px solid hsl(356deg, 100%, 67%);
+    box-shadow: 4px 4px 32px 0 hsl(356deg, 100%, 67%);
+  }
+  15% {
+    border: 2px solid hsl(4deg, 100%, 68%);
+    box-shadow: 4px 4px 32px 0 hsl(4deg, 100%, 68%);
+  }
+  30% {
+    border: 2px solid hsl(356deg, 100%, 67%);
+    box-shadow: 4px 4px 32px 0 hsl(356deg, 100%, 67%);
+  }
+  45% {
+    border: 2px solid hsl(4deg, 100%, 68%);
+    box-shadow: 4px 4px 32px 0 hsl(4deg, 100%, 68%);
+  }
+  60% {
+    border: 2px solid hsl(356deg, 100%, 67%);
+    box-shadow: 4px 4px 32px 0 hsl(356deg, 100%, 67%);
+  }
+  75% {
+    border: 2px solid hsl(4deg, 100%, 68%);
+    box-shadow: 4px 4px 32px 0 hsl(4deg, 100%, 68%);
+  }
+  90% {
+    border: 2px solid hsl(356deg, 100%, 67%);
+    box-shadow: 4px 4px 32px 0 hsl(356deg, 100%, 67%);
+  }
+  100% {
+    border: 2px solid hsl(4deg, 100%, 68%);
+    box-shadow: 4px 4px 32px 0 hsl(4deg, 100%, 68%);
+  }
+}
+.hsh-bulletin-item-type {
+  padding: 2px 16px;
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  border-radius: 4px;
+}
+
+.icon-top-arrow-svgrepo-com {
+  background-color: hsl(356deg, 100%, 67%);
+}
+
+.icon-premium-badge-svgrepo-com {
+  background-color: hsl(337deg, 98%, 58%);
+}
+
+.icon-hot-svgrepo-com-1 {
+  background-color: hsl(4deg, 100%, 68%);
 }
 
 .hsh-bulletin-item-container-left {
@@ -1266,6 +1353,32 @@ template {
 
 .hsh-bulletin-item-container-right {
   cursor: pointer;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+.hsh-bulletin-item-description {
+  margin-top: 10px;
+  margin-left: 10px;
+  width: 95%;
+  word-wrap: break-word;
+  font-size: 16px;
+  letter-spacing: -0.1px;
+  max-height: 60px;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  word-spacing: 0;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+}
+
+.hsh-bulletin-item-extra {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-bottom: 10px;
 }
 
 /* Slideshow container */
@@ -1312,6 +1425,7 @@ template {
   left: 0;
   width: 100%;
   height: 100%;
+  border-radius: 8px 0 0 8px;
 }
 
 /* Next & previous buttons */
@@ -1410,6 +1524,7 @@ template {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
 }
 
 .hsh-filters-form-item input, .hsh-filters-form-item select {
@@ -1420,9 +1535,28 @@ template {
   border: none;
   border-radius: 8px;
   width: 90%;
+  max-width: 160px;
   height: 30px;
   outline: none;
   padding: 0 5px;
+}
+.hsh-filters-form-item button {
+  box-sizing: content-box;
+  box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+  display: block;
+  margin: 0 auto;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 160px;
+  height: 30px;
+  padding: 0 5px;
+  background: linear-gradient(0deg, rgb(255, 88, 100) 0%, rgb(255, 101, 91) 100%);
+  color: white;
+}
+
+.hsh-filters-form-item-btn-search .hsh-txt {
+  cursor: pointer;
+  pointer-events: none;
 }
 
 .hsh-country-menu-container {
@@ -1450,15 +1584,37 @@ template {
 .hsh-menu-item-container {
   height: -moz-max-content;
   height: max-content;
-  width: 300px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 300px;
   box-sizing: content-box;
   box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
   border-radius: 8px;
   overflow: hidden;
   cursor: pointer;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.hsh-menu-item-container:hover {
+  animation: changeColor 4s infinite;
 }
 
+@keyframes changeColor {
+  0% {
+    box-shadow: 4px 4px 9px 0 hsl(4deg, 100%, 68%);
+  }
+  30% {
+    box-shadow: 4px 4px 9px 0 hsl(4deg, 100%, 68%);
+  }
+  50% {
+    box-shadow: 4px 4px 9px 0 hsl(337deg, 98%, 58%);
+  }
+  70% {
+    box-shadow: 4px 4px 9px 0 hsl(337deg, 98%, 58%);
+  }
+  100% {
+    box-shadow: 4px 4px 9px 0 hsl(356deg, 100%, 67%);
+  }
+}
 .hsh-menu-item-image {
   width: 100%;
   height: 300px;
@@ -1478,13 +1634,21 @@ template {
   justify-content: center;
   height: 30px;
 }
+.hsh-menu-item-category .hsh-txt {
+  color: hsl(0deg, 0%, 100%);
+}
 
 .hsh-menu-item-category-description {
-  background-color: yellow;
-  padding: 5px;
+  padding: 8px;
 }
 
 .hsh-menu-item-city {
-  padding: 5px;
-  background-color: #1acbff;
+  padding: 8px;
+  border-bottom: 1px solid hsl(0deg, 0%, 84%);
+}
+
+@media only screen and (max-width: 640px) {
+  .hsh-menu-item-container {
+    max-width: 640px;
+  }
 }

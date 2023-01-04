@@ -15,6 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 10px;
 }
 
 .hsh-filters-form-item {
@@ -27,8 +28,30 @@
         border: none;
         border-radius: 8px;
         width: 90%;
+        max-width: 160px;
         height: 30px;
         outline: none;
         padding: 0 5px;
+    }
+
+    button {
+        box-sizing: content-box;
+        box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+        display: block;
+        margin: 0 auto;
+        border-radius: 8px;
+        width: 90%;
+        max-width: 160px;
+        height: 30px;
+        padding: 0 5px;
+        background: linear-gradient(0deg, rgb(255, 88, 100) 0%, rgb(255, 101, 91) 100%);
+        color: white;
+    }
+}
+
+.hsh-filters-form-item-btn-search {
+    .hsh-txt{
+        cursor: pointer;
+        pointer-events:none;
     }
 }

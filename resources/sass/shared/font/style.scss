@@ -1,30 +1,39 @@
 @font-face {
-  font-family: 'icomoon';
-  src:  url('icomoon.eot?z9byv6');
-  src:  url('icomoon.eot?z9byv6#iefix') format('embedded-opentype'),
-    url('icomoon.ttf?z9byv6') format('truetype'),
-    url('icomoon.woff?z9byv6') format('woff'),
-    url('icomoon.svg?z9byv6#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+    font-family: 'icomoon';
+    src:  url('icomoon.eot?mz9hys');
+    src:  url('icomoon.eot?mz9hys#iefix') format('embedded-opentype'),
+    url('icomoon.ttf?mz9hys') format('truetype'),
+    url('icomoon.woff?mz9hys') format('woff'),
+    url('icomoon.svg?mz9hys#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: never;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-top-arrow-svgrepo-com:before {
+    content: "\e901";
+}
+.icon-premium-badge-svgrepo-com:before {
+    content: "\e902";
+}
+.icon-hot-svgrepo-com-1:before {
+    content: "\e903";
+}
 .icon-home:before {
-  content: "\e900";
+    content: "\e900";
 }

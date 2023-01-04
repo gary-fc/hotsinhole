@@ -19755,14 +19755,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  "class": "hsh-bulletin-container-component"
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_bulletin_item_component = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("bulletin-item-component");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.bulletins, function (item, index) {
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_1, [((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.bulletins, function (item, index) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(_component_bulletin_item_component, {
       "bulletin-id": item.id,
       bulletin: item
     }, null, 8 /* PROPS */, ["bulletin-id", "bulletin"]);
-  }), 256 /* UNKEYED_FRAGMENT */);
+  }), 256 /* UNKEYED_FRAGMENT */))]);
 }
 
 /***/ }),
@@ -19781,51 +19784,97 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 var _hoisted_1 = {
-  "class": "hsh-bulletin-item-container"
+  key: 0,
+  "class": "hsh-bulletin-item-type icon-top-arrow-svgrepo-com"
 };
 var _hoisted_2 = {
-  "class": "hsh-bulletin-item-container-left"
+  key: 1,
+  "class": "hsh-bulletin-item-type icon-premium-badge-svgrepo-com"
 };
 var _hoisted_3 = {
-  "class": "hsh-slider-container"
+  key: 2,
+  "class": "hsh-bulletin-item-type icon-hot-svgrepo-com-1"
 };
 var _hoisted_4 = {
+  key: 3,
+  "class": "hsh-bulletin-item-container-left"
+};
+var _hoisted_5 = {
+  "class": "hsh-slider-container"
+};
+var _hoisted_6 = {
   "class": "hsh-slides-container"
 };
-var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "numbertext"
 }, "1 / 3", -1 /* HOISTED */);
-var _hoisted_6 = ["src"];
-var _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
+var _hoisted_8 = ["src"];
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", {
   "class": "text"
 }, "Caption Text", -1 /* HOISTED */);
-var _hoisted_8 = {
+var _hoisted_10 = {
   "class": "hsh-bulletin-item-container-right"
 };
+var _hoisted_11 = ["title"];
+var _hoisted_12 = {
+  "class": "hsh-bulletin-item-extra"
+};
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Escorts", -1 /* HOISTED */);
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Santa Cruz", -1 /* HOISTED */);
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, "Tercer Anillo", -1 /* HOISTED */);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  var _this = this;
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Slideshow container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Full-width images with number and caption text "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.images, function (item, index) {
+  var _$props$bulletin,
+    _$props$bulletin2,
+    _$props$bulletin3,
+    _$props$bulletin4,
+    _$props$bulletin5,
+    _$props$bulletin6,
+    _$props$bulletin7,
+    _$props$bulletin8,
+    _$props$bulletin9,
+    _$props$bulletin10,
+    _this = this,
+    _$props$bulletin11,
+    _$props$bulletin12,
+    _$props$bulletin13,
+    _$props$bulletin14,
+    _this$bulletin2,
+    _this$bulletin3,
+    _this$bulletin4;
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("article", {
+    "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["hsh-bulletin-item-container", {
+      'bg-top': ((_$props$bulletin = $props.bulletin) === null || _$props$bulletin === void 0 ? void 0 : _$props$bulletin.type) === 'TOP',
+      'bg-premium': ((_$props$bulletin2 = $props.bulletin) === null || _$props$bulletin2 === void 0 ? void 0 : _$props$bulletin2.type) === 'PREMIUM',
+      'bg-hot': ((_$props$bulletin3 = $props.bulletin) === null || _$props$bulletin3 === void 0 ? void 0 : _$props$bulletin3.type) === 'HOT'
+    }])
+  }, [((_$props$bulletin4 = $props.bulletin) === null || _$props$bulletin4 === void 0 ? void 0 : _$props$bulletin4.type) !== 'FREE' && ((_$props$bulletin5 = $props.bulletin) === null || _$props$bulletin5 === void 0 ? void 0 : _$props$bulletin5.type) === 'TOP' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_1)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((_$props$bulletin6 = $props.bulletin) === null || _$props$bulletin6 === void 0 ? void 0 : _$props$bulletin6.type) !== 'FREE' && ((_$props$bulletin7 = $props.bulletin) === null || _$props$bulletin7 === void 0 ? void 0 : _$props$bulletin7.type) === 'PREMIUM' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_2)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((_$props$bulletin8 = $props.bulletin) === null || _$props$bulletin8 === void 0 ? void 0 : _$props$bulletin8.type) !== 'FREE' && ((_$props$bulletin9 = $props.bulletin) === null || _$props$bulletin9 === void 0 ? void 0 : _$props$bulletin9.type) === 'HOT' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("label", _hoisted_3)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((_$props$bulletin10 = $props.bulletin) === null || _$props$bulletin10 === void 0 ? void 0 : _$props$bulletin10.type) !== 'FREE' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("section", _hoisted_4, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Slideshow container "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Full-width images with number and caption text "), ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)(this.images, function (item, index) {
     var _this$bulletin;
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", {
       "class": (0,vue__WEBPACK_IMPORTED_MODULE_0__.normalizeClass)(["hsh-slider-item fade", 'hsh-slider-item-' + ((_this$bulletin = _this.bulletin) === null || _this$bulletin === void 0 ? void 0 : _this$bulletin.id)]),
       key: index
-    }, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
+    }, [_hoisted_7, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("img", {
       src: item,
       style: {
         "width": "100%"
       }
-    }, null, 8 /* PROPS */, _hoisted_6), _hoisted_7], 2 /* CLASS */);
-  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Next and previous buttons "), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+    }, null, 8 /* PROPS */, _hoisted_8), _hoisted_9], 2 /* CLASS */);
+  }), 128 /* KEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Next and previous buttons "), ((_$props$bulletin11 = $props.bulletin) === null || _$props$bulletin11 === void 0 ? void 0 : _$props$bulletin11.type) !== 'FREE' && ((_$props$bulletin12 = $props.bulletin) === null || _$props$bulletin12 === void 0 ? void 0 : _$props$bulletin12.type) !== 'TOP' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+    key: 0,
     "class": "prev",
     onClick: _cache[0] || (_cache[0] = function ($event) {
       return $options.plusSlides(-1);
     })
-  }, "❮"), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("a", {
+  }, "❮")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), ((_$props$bulletin13 = $props.bulletin) === null || _$props$bulletin13 === void 0 ? void 0 : _$props$bulletin13.type) !== 'FREE' && ((_$props$bulletin14 = $props.bulletin) === null || _$props$bulletin14 === void 0 ? void 0 : _$props$bulletin14.type) !== 'TOP' ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("a", {
+    key: 1,
     "class": "next",
     onClick: _cache[1] || (_cache[1] = function ($event) {
       return $options.plusSlides(1);
     })
-  }, "❯")])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(this.bulletin), 1 /* TEXT */)]);
+  }, "❯")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)])])])) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", {
+    "class": "hsh-txt hsh-bulletin-item-description",
+    title: (_this$bulletin2 = this.bulletin) === null || _this$bulletin2 === void 0 ? void 0 : _this$bulletin2.bulletin_description
+  }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_this$bulletin3 = this.bulletin) === null || _this$bulletin3 === void 0 ? void 0 : _this$bulletin3.bulletin_description), 9 /* TEXT, PROPS */, _hoisted_11), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("section", _hoisted_12, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("label", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)((_this$bulletin4 = this.bulletin) === null || _this$bulletin4 === void 0 ? void 0 : _this$bulletin4.bulletin_year) + " años", 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" | "), _hoisted_13, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" | "), _hoisted_14, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" | "), _hoisted_15])])], 2 /* CLASS */);
 }
 
 /***/ }),
