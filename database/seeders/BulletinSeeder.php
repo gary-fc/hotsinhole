@@ -78,7 +78,7 @@ Atiendo en mi depa y tmb hago salidas a hoteles , moteles , deoartamentos atiend
                 'category_id' => 1,
                 'city_id' => 1,
                 'country_id' => 1,
-            )
+            ),
         );
 
         foreach ($bulletins as $bulletin) {

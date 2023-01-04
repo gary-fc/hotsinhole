@@ -19716,8 +19716,11 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
+    var _this$bulletin2;
     this.slideIndex = 1;
-    this.showSlides(this.slideIndex);
+    if (((_this$bulletin2 = this.bulletin) === null || _this$bulletin2 === void 0 ? void 0 : _this$bulletin2.type) !== 'FREE') {
+      this.showSlides(this.slideIndex);
+    }
   }
 });
 

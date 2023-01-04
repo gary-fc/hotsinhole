@@ -99,7 +99,9 @@ export default {
     },
     mounted() {
         this.slideIndex = 1;
-        this.showSlides(this.slideIndex);
+        if (this.bulletin?.type !== 'FREE') {
+            this.showSlides(this.slideIndex);
+        }
     }
 }
 </script>
