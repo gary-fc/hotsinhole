@@ -1443,6 +1443,9 @@ template {
   gap: 10px;
   height: 100%;
 }
+.hsh-country-menu-container-card .hsh-link {
+  padding: 0;
+}
 
 .hsh-menu-item-container {
   height: -moz-max-content;

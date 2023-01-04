@@ -20,10 +20,10 @@ class CategorySeeder extends Seeder
     public function addCategories()
     {
         $categories = array(
-            array('category_name' => 'escorts'),
-            array('category_name' => 'escorts men'),
-            array('category_name' => 'trans and transvestites'),
-            array('category_name' => 'chance encounters'),
+            array('category_name' => 'escorts', 'category_url' => 'escorts'),
+            array('category_name' => 'escorts men', 'category_url' => 'escorts-men'),
+            array('category_name' => 'trans and transvestites', 'category_url' => 'trans'),
+            array('category_name' => 'chance encounters', 'category_url' => 'chance-encounters'),
 
         );
         foreach ($categories as $category) {
@@ -31,10 +31,12 @@ class CategorySeeder extends Seeder
             if (!$find->first()) {
                 Category::create([
                     'category_name' => $category['category_name'],
+                    'category_url' => $category['category_url'],
                 ]);
             } else {
                 $find->update([
                     'category_name' => $category['category_name'],
+                    'category_url' => $category['category_url'],
                 ]);
             }
         }
