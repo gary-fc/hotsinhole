@@ -18,5 +18,6 @@
 @yield('content')
 
 @include('shared.footers.footer_auth')
+<script src="{{ mix('/js/app.js') }}"></script>
 </body>
 </html>

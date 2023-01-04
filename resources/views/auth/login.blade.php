@@ -28,11 +28,6 @@
                     {!! $errors->first('password', '<span class="form-text text-danger">:message</span>') !!}
                 </section>
 
-                {{--                <section class="hsh-login-form-item">--}}
-                {{--                    @include('shared.forms.fire_toggle', ['name'=> 'privacy_policy'])--}}
-                {{--                    {!! $errors->first('privacy_policy', '<span class="form-text text-danger">:message</span>') !!}--}}
-                {{--                </section>--}}
-
                 <section class="hsh-login-form-item-btn">
                     {{Form::submit(__('auth/login.btn_sign_up'))}}
                 </section>

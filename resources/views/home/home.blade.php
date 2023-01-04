@@ -7,6 +7,6 @@
 
 @section('content')
     @foreach($countries as $country)
-        @include('home/country/country_item',[$country])
+        @include('country/country_item',[$category,$country])
     @endforeach
 @endsection

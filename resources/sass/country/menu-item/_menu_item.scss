@@ -1,0 +1,40 @@
+.hsh-menu-item-container {
+    height: max-content;
+    width: 300px;
+    max-width: 90%;
+    box-sizing: content-box;
+    box-shadow: 4px 4px 9px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.hsh-menu-item-image {
+    width: 100%;
+    height: 300px;
+
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px 8px 0 0;
+    }
+}
+
+.hsh-menu-item-category {
+    display: flex;
+    align-items: center;
+    background-color: $hsh-orange;
+    justify-content: center;
+    height: 30px;
+}
+
+.hsh-menu-item-category-description {
+    background-color: yellow;
+    padding: 5px;
+}
+
+.hsh-menu-item-city {
+    padding: 5px;
+    background-color: #1acbff;
+}

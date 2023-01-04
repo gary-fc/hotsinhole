@@ -1,0 +1,17 @@
+.hsh-country-menu-container {
+    margin-top: 30px;
+    height: max-content;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.hsh-country-menu-container-card {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    height: 100%;
+}

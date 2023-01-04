@@ -3,8 +3,6 @@
 }
 
 .hsh-country-item-container-country {
-    display: flex;
-    justify-content: center;
     max-width: 500px;
     width: 90%;
     box-sizing: content-box;
@@ -12,6 +10,11 @@
     margin: 20px auto 0;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.hsh-country-item-container-country-section {
+    display: flex;
+    justify-content: center;
 }
 
 .hsh-country-item-left {
@@ -34,11 +37,11 @@
     height: 30%;
 }
 
-.hsh-country-item-country-body{
+.hsh-country-item-country-body {
     height: 40%;
 }
 
-.hsh-country-item-country-details{
+.hsh-country-item-country-details {
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -47,7 +50,23 @@
 }
 
 .hsh-country-item-container-cities {
+    max-height: 0;
     max-width: 500px;
-    width: 90%;
+    width: 100%;
+    overflow: hidden;
     margin: 0 auto;
+    transition: max-height 2s ease-in-out;
+
+    .hsh-country-item-container-city {
+        display: none;
+    }
+}
+
+.hsh-country-item-container-cities.active {
+    max-height: 1000px;
+    padding-bottom: 10px;
+
+    .hsh-country-item-container-city {
+        display: block;
+    }
 }

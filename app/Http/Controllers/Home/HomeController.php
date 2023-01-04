@@ -19,13 +19,15 @@ class HomeController extends Controller
 
     public function mainDomain($subdomain)
     {
-        $data = ['subdomain' => $subdomain];
+        $category = 'escorts';
+        $data = ['category' => $category, 'subdomain' => $subdomain];
         return view('home.home', $data);
     }
 
     public function subdomains($subdomain)
     {
-        $data = ['subdomain' => $subdomain];
-        return view('home.subdomain.index', $data);
+        $category = 'escorts';
+        $data = ['category' => $category, 'subdomain' => $subdomain];
+        return view('country.index', $data);
     }
 }
